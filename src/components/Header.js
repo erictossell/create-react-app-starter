@@ -5,12 +5,6 @@ import styled from '@emotion/styled';
 
 import Logo from '../color_logo.svg'; // Import your logo
 
-const Title = styled(Typography)`
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-`;
-
 const LogoImage = styled('img')`
   height: 35px; // Adjust based on your logo size
   width: auto; // Let the width adjust automatically
