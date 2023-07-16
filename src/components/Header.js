@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box, Stack } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Box, Stack, Container} from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import styled from '@emotion/styled';
 
@@ -14,33 +14,34 @@ const LogoImage = styled('img')`
 function Header() {
   const theme = useTheme();
 
-  return (
+ return (
     <AppBar position="static" sx={{ backgroundColor: theme.palette.tertiary.main }}>
-      <Toolbar>
-        <Stack direction="row" spacing={2} alignItems="center">
-          <LogoImage src={Logo} alt="logo" />
+      <Container maxWidth="lg"> {/* set the maxWidth according to your need */}
+        <Toolbar>
+          <Stack direction="row" spacing={2} alignItems="center">
+            <LogoImage src={Logo} alt="logo" />
 
-          <Box flexGrow={1}>
-            <Typography variant="h6"></Typography>
-          </Box>
-        </Stack>
+            <Box flexGrow={1}>
+              <Typography variant="h6"></Typography>
+            </Box>
+          </Stack>
 
-        <Button
-          variant="outlined"
-          sx={{
-            color: theme.palette.secondary.main,
-            borderColor: theme.palette.secondary.main,
-            backgroundColor: theme.palette.background.default,
-            whiteSpace: 'nowrap', // Prevent the button from wrapping
-            marginLeft: 'auto', // Push the button to the right edge
-          }}
-        >
-          Coming soon
-        </Button>
-      </Toolbar>
+          <Button
+            variant="outlined"
+            sx={{
+              color: theme.palette.secondary.main,
+              borderColor: theme.palette.secondary.main,
+              backgroundColor: theme.palette.background.default,
+              whiteSpace: 'nowrap', // Prevent the button from wrapping
+              marginLeft: 'auto', // Push the button to the right edge
+            }}
+          >
+            Coming soon
+          </Button>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 }
-
 export default Header;
 

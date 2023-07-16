@@ -16,7 +16,10 @@ function Footer() {
         textAlign: 'center' 
       }}
     >
-      <Typography variant="body1">
+      <Typography
+        variant="body1"
+        sx={{ color: theme.palette.secondary.main }}
+      >
         &copy; 2023 Mythic+ Bot
       </Typography>
     </Box>
