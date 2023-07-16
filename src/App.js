@@ -1,9 +1,11 @@
 import React from 'react';
 import { ThemeProvider, createTheme, CssBaseline, Grid } from '@mui/material';
+
 import Header from './components/Header';
 import MainSection from './components/MainSection';
 import Footer from './components/Footer';
 import InteractiveComponent from './components/Interactive';
+import CallToAction from './components/CallToAction';
 
 const theme = createTheme({
   components: {
@@ -47,7 +49,9 @@ function App() {
       <div className="App">
         <Grid container direction="column" style={{ minHeight: '100vh' }}>
           <Grid item>
-            <Header />
+            
+              <Header />
+            
           </Grid>
 
           <Grid item container component="main" style={{ flex: 1 }}>
@@ -59,6 +63,9 @@ function App() {
                 </Grid>
                 <Grid item xs={12}>
                   <InteractiveComponent />
+                </Grid>
+                <Grid item xs={12}>
+                  <CallToAction />
                 </Grid>
               </Grid>
             </Grid>
