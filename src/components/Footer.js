@@ -1,12 +1,25 @@
-
 // Footer.js
 import React from 'react';
+import { Box, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 function Footer() {
+  const theme = useTheme();
+  
   return (
-    <footer>
-      <p>&copy; 2023 Our Site</p>
-    </footer>
+    <Box 
+      component="footer" 
+      sx={{ 
+        backgroundColor: theme.palette.tertiary.main, 
+        color: theme.palette.text.primary, 
+        padding: theme.spacing(2), 
+        textAlign: 'center' 
+      }}
+    >
+      <Typography variant="body1">
+        &copy; 2023 Mythic+ Bot
+      </Typography>
+    </Box>
   );
 }
 
