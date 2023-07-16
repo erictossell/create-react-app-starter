@@ -19,7 +19,6 @@ function App() {
     "/guild mythic_plus": "command/guild mythic_plus",
     "/character best_runs": "command/character best_runs",
     "/character recent_runs": "command/character recent_runs",
-    
     commands: "/command/",
     "/": "/command/", // add this line to make "/" an alias for "command"
 };
@@ -52,7 +51,7 @@ function App() {
       setResult(func(parseInt(a), parseInt(b)));
     } else if (typeof func === "string" && params) {
       try {
-        const response = await fetch("http://127.0.0.1:8000" + func + params);
+        const response = await fetch("https://mplus-api.up.railway.app" + func + params);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
