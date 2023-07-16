@@ -24,7 +24,7 @@ return (
               Docs
             </Typography>
             <Typography variant="body2" sx={{ display: 'flex', overflowWrap: 'break-word' }}>
-              Check out our source code repository for open-source contributions.
+              Check out the Docs to see how to use the bot.
             </Typography>
             <Button variant="contained" color="secondary" component={RouterLink} to="/docs">
               View Docs
@@ -39,7 +39,7 @@ return (
               DevBlog
             </Typography>
             <Typography variant="body2" sx={{ display: 'flex', overflowWrap: 'break-word' }}>
-              Check out our source code repository for open-source contributions.
+              Check out the DevBlog to see how we got here!
             </Typography>
             <Button variant="contained" color="secondary" component={RouterLink} to="/devblog">
               View Dev Blog
